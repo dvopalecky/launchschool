@@ -50,12 +50,3 @@ class Board
     joined.scan(/\*/).size
   end
 end
-
-inp = ['+---+', '|***|', '|* *|', '|***|', '+---+']
-inp2 = ['+------+', '| *  * |', '|  *   |', '|    * |', '|   * *|',
-           '| *  * |', '|*     |', '+------+']
-inp3 = ['+-+', '|*|', '+-+']
-
-inp3.each {|r| puts r }
-Board.transform(inp3).each {|r| puts r }
-
