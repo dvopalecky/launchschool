@@ -30,18 +30,17 @@ class Board
 
   def self.count_and_edit(matrix)
     # matrix is array of strings
-    matrix_edited = matrix
     nb_rows = matrix.size
     nb_columns = matrix.first.length
     (1..(nb_rows-2)).each do |row|
       (1..(nb_columns-2)).each do |col|
         count_mines = count_mines_around_cell(matrix, row, col)
         if count_mines > 0 && matrix[row][col] != '*'
-          matrix_edited[row][col] = count_mines.to_s
+          matrix[row][col] = count_mines.to_s
         end
       end
     end
-    matrix_edited
+    matrix
   end
 
   def self.count_mines_around_cell(matrix, row, col)
